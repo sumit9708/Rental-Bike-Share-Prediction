@@ -1,0 +1,2 @@
+# Rental-Bike-Share-Prediction
+Bike sharing system are a new generation of traditional bike rentals where the whole process from membership , rental and return back has become automatic.the goal here is to predict the total number of bikes available. It takes some input feature such as month name,days name , season name .. etc. In this project i have performed data cleaning and handled missing values,created best fit model using GridSearchCV, Linear regression and Random forest regressor.
