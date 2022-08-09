@@ -1,0 +1,47 @@
+{% extends 'dashboard.html' %}
+
+{% block head %}
+
+
+<title>Model Config</title>
+{% endblock %}
+
+{% block content %}
+<main class="mt-5 pt-3">
+    <div class="container-fluid">
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/dashboard">Dashboard</a></li>
+                <li class="breadcrumb-item"><a href="/update_model_config">Model Config</a></li>
+            </ol>
+        </nav>
+<div class="row">
+    <div class="col-md-12 " >
+        <form method="post" action="/update_model_config">
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Existing model config</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"  readonly>
+                    {{ result['model_config'] }}
+                </textarea>
+              </div>
+              <div class="mb-3">
+              <a href="https://jsonformatter.curiousconcept.com/#" class="btn btn-primary" target="_blank">Validate model config json</a>
+        </div>
+              <div class="mb-3">
+            <label for="exampleFormControlTextarea2" class="form-label">Model Config JSON:</label>
+            <textarea class="form-control" name="new_model_config" id="exampleFormControlTextarea2" rows="10"></textarea>
+        </div>
+        <div class="mb-3">
+            <input type="submit"  class="btn btn-warning" value="Update model config"/>
+          </div>
+        
+        </form>
+    </div>
+</div>
+</div>
+</main>
+
+
+        
+{% endblock %}

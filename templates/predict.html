@@ -1,0 +1,212 @@
+{% extends 'dashboard.html' %}
+
+{% block head %}
+
+
+<title>Single Count Predictor</title>
+{% endblock %}
+
+{% block content %}
+
+<main class="mt-5 pt-3">
+    <div class="container-fluid">
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/dashboard">Dashboard</a></li>
+        <li class="breadcrumb-item"><a href="/predict">Single Predictor</a></li>
+    </ol>
+</nav>
+<hr>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/predict.css') }}" />
+<!--Card-->
+<div class="card shadow mb-5 bg-white rounded">
+
+	<!--Card-Body-->
+	<div class="card-body">
+
+		<!--Card-Title-->
+		<p class="card-title text-center shadow mb-5 rounded">Single Bike Count Predictor </p>
+		
+
+        <form action="/predict" method="post">
+		<!--Second Row-->
+		<div class="row">
+
+			<div class="col-sm-6">
+				<select class="browser-default custom-select mb-4" id="select" name="season" required>
+        <option value="" disabled="" selected="">Select Season</option>
+        <option value="1">Spring</option>
+        <option value="2">Summer</option>
+        <option value="3">Fall</option>
+        <option value="4">Winter</option>
+       
+    </select>
+			</div>
+
+			<div class="col-sm-6">
+				<select class="browser-default custom-select mb-4" name="year" id="select" >
+                    <option value="" disabled="" selected="">Select Year</option>
+                    <option value="0">2011</option>
+                    <option value="1">2012</option>
+                </select>
+			</div>
+
+		</div>
+
+
+		<!--Third Row-->
+		<div class="row mt-4">
+
+			<div class="col-sm-6">
+				<select class="browser-default custom-select mb-4" name="month" id="select" required>
+                    <option value="" disabled="" selected="">Select Month</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">december</option>
+                </select>
+			</div>
+
+				<div class="col-sm-6">
+					<select class="browser-default custom-select mb-4" name="hour" placeholder="Select value of Month"
+                    required>
+                    <option value="" disabled="" selected="">Select Hours</option>
+                    <option value="1">12 AM</option>
+                    <option value="2">1 AM</option>
+                    <option value="3">2 AM</option>
+                    <option value="4">3 AM</option>
+                    <option value="5">4 AM</option>
+                    <option value="6">5 AM</option>
+                    <option value="7">6 AM</option>
+                    <option value="8">7 AM</option>
+                    <option value="9">8 AM</option>
+                    <option value="10">9 AM</option>
+                    <option value="11">10 AM</option>
+                    <option value="12">11 AM</option>
+                    <option value="1">12 PM</option>
+                    <option value="2">1 PM</option>
+                    <option value="3">2 PM</option>
+                    <option value="4">3 PM</option>
+                    <option value="5">4 PM</option>
+                    <option value="6">5 PM</option>
+                    <option value="7">6 PM</option>
+                    <option value="8">7 PM</option>
+                    <option value="9">8 PM</option>
+                    <option value="10">9 PM</option>
+                    <option value="11">10 PM</option>
+                    <option value="12">11 PM</option>
+                </select>
+			</div>
+				</div>
+				<!--Fourth Row-->
+				<div class="row mt-4">
+
+					<div class="col-sm-6">
+						<select class="browser-default custom-select mb-4" id="select" name="holiday" required>
+                            <option value="" disabled="" selected="">Select  Holiday</option>
+                            <option value="0">Not Holiday</option>
+                            <option value="1">Holiday</option>
+                        </select>
+					</div>
+
+					<div class="col-sm-6">
+						<select class="browser-default custom-select mb-4" id="select" name="weekday" required>
+                            <option value="" disabled="" selected="">Select  Weekday</option>
+                            <option value="1">Sunday</option>
+                            <option value="2">Monday</option>
+                            <option value="3">Tuesday</option>
+                            <option value="4">Wednesday</option>
+                            <option value="5">Thursday</option>
+                            <option value="6">Friday</option>
+                            <option value="7">Saturday</option>
+                        </select>
+					</div>
+
+				</div>
+
+                <!--Fifth Row-->
+				<div class="row mt-4">
+
+					<div class="col-sm-6">
+						<select class="browser-default custom-select mb-4" id="select" name="workingday" required>
+                            <option value="" disabled="" selected="">Select workingday</option>
+                            <option value="0">Not Working Day</option>
+                            <option value="1">Working Day</option>
+                        </select>
+					</div>
+
+					<div class="col-sm-6">
+                        <select class="browser-default custom-select mb-4"  name="weather" id="select" required>
+                            <option value="" disabled="" selected="">Select value of Weather</option>
+                            <option value="1">Clear</option>
+                            <option value="2">Cloudy</option>
+                            <option value="3">Rainy</option>
+                            <option value="4">Heavy Rains</option>
+                        </select>
+					</div>
+
+				</div>
+
+
+				<!--Sixth Row-->
+				<div class="row">
+
+					<div class="col-sm-4">
+						<input class="form-control" type="number" name = "temp" placeholder = "Temperature(*C)" required>
+					</div>
+
+					<div class="col-sm-4">
+						<input class="form-control" type="number" name = "humidity" placeholder = "Humidity(%)" required>
+					</div>
+
+					<div class="col-sm-4">
+                        <input class="form-control" type="number" name = "windspeed" placeholder = "Windspeed(kmph)" required>
+					</div>
+
+				</div>
+
+                
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button class="btn btn-primary mt-5" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">Predict Bikes Count</button>
+                  </div>
+                  
+                
+                  
+			</div>
+           
+        </form>
+        
+		</div>
+        {% if context['sharing_data'] is not none %}
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title text-center" id="exampleModalLabel">Rented Bike Count</h5>
+                      <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <h3>{{ context['median_share_value']  }}</h3>
+                     
+                      <button type="button" class="btn btn-custom" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div> 
+            </div>
+          </div>
+          {% endif %}
+
+    </div>
+    </main>
+ {% endblock %}
+

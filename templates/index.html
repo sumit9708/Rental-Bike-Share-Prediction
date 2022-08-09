@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bike Count Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<header>
+    <a href="/" class="logo"><img src="{{ url_for('static', filename='/Rental Bikes-logos_transparent.png') }}" style="width: 100px;height:100px;">Bike Count Predictor</a>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</header>
+
+<section>
+    <img src="{{ url_for('static', filename='/stars.png') }}" id="stars">
+    <img src="{{ url_for('static', filename='/moon.png') }}" id="moon">
+    <h2 id="text">Bike Count Predictor</h2>
+    <a href="#sec" id="btn">Explore</a>
+    <img src="{{ url_for('static', filename='/mountains_behind.png') }}" id="mountains_behind">
+    <img src="{{ url_for('static', filename='/mountains_front.png') }}" id="mountains_front">
+</section>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+<footer>
+<div class="container" id="sec">
+    <div class="card">
+        <div class="imgBx"  data-text="Logs">
+            <img src="static/logs.png" alt="">
+        </div>
+        <div class="content">
+            <div>
+                <h3>Logs</h3>
+                <p>All model training log file can be downloaded.</p>
+                <a href="/dashboard">Launch</a>
+            </div>
+        </div>
+    </div>
+     <div class="card">
+        <div class="imgBx" data-text="Artifact">
+            <img src="static/artifact.png" alt="" >
+        </div>
+        <div class="content">
+            <div>
+                <h3>Artifact</h3>
+                <p>All model artifacts file can be downloaded.</p>
+                <a href="/dashboard">Launch</a>
+            </div>
+        </div>
+    </div>
+     <div class="card">
+        <div class="imgBx" data-text="Trained Model">
+            <img src="static/trained_model.png" alt="" >
+        </div>
+        <div class="content">
+            <div>
+                <h3>Trained Model</h3>
+                <p>All model artifacts file can be downloaded.</p>
+                <a href="/dashboard">Launch</a>
+            </div>
+        </div>
+    </div>
+     <div class="card">
+        <div class="imgBx" data-text="Prediction">
+            <img src="static/predictor.png" alt="" >
+        </div>
+        <div class="content">
+            <div>
+                <h3>Prediction</h3>
+                <p>Form will be displayed for single prediction. Submit the form to get estimated count for Rental Bike Count.</p>
+                <a href="/dashboard">Launch</a>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="imgBx" data-text="Train Estimator">
+            <img src="static/1.png" alt="" >
+        </div>
+        <div class="content">
+            <div>
+                <h3>Train Estimator</h3>
+                <p>Model training will be done. Files such as log, artifact and models can be viewed and downloaded using appropriate link.</p>
+                <a href="/dashboard">Launch</a>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="imgBx" data-text="Batch Predictor">
+            <img src="static/update.png" alt="" >
+        </div>
+        <div class="content">
+            <div>
+                <h3>Update Config</h3>
+                <p>Form will be displayed for batch prediction. Submit the form to get estimated count for Rental Bike Count.</p>
+                <a href="/dashboard">Launch</a>
+            </div>
+        </div>
+    </div>
+</div>
+</footer>
+<section class="timeline_area section_padding_130" style="background: #ddd;" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <!-- Timeline Area-->
+                <div class="apland-timeline-area">
+                    
+                    <!-- Single Timeline Content-->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <p>DATA INGESTION </p>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-icon"><i class="fa fa-cloud-download" aria-hidden="true"></i></div>
+                                    <div class="timeline-text">
+                                        <h6>Download Compressed Dataset </h6>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                                    <div class="timeline-icon"><i class="fa fa-file-zip-o" aria-hidden="true"></i></div>
+                                    <div class="timeline-text">
+                                        <h6>UnCompressed Dataset </h6>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+                                    <div class="timeline-icon"><i class="fa fa-industry" aria-hidden="true"></i></div>
+                                    <div class="timeline-text">
+                                        <h6>Stratified Split Dataset</h6>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Timeline Content-->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <p>DATA VALIDATION</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-icon"><i class="fa fa-object-ungroup" aria-hidden="true"></i></div>
+                                    <div class="timeline-text">
+                                        <h6>Validating Data Drift</h6>  
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                                    <div class="timeline-icon"><i class="fa fa-map-signs" aria-hidden="true"></i></div>
+                                    <div class="timeline-text">
+                                        <h6>Validating Data Types</h6>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                                    <div class="timeline-icon"><i class="fa fa-line-chart" aria-hidden="true"></i></div>
+                                    <div class="timeline-text">
+                                        <h6>Performed EDA</h6>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Timeline Content-->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <p>DATA TRANSFORMATION</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-icon"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></div>
+                                    <div class="timeline-text">
+                                        <h6>Performed Feature Engineering</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                                    <div class="timeline-icon"><i class="fa fa-sort-numeric-asc" aria-hidden="true"></i></div>
+                                    <div class="timeline-text">
+                                        <h6>Numerical Columns</h6>
+                                        <p>Applied Standard Scaler & Mean Imputation</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+                                    <div class="timeline-icon"><i class="fa fa-sort-alpha-asc" aria-hidden="true"></i></div>
+                                    <div class="timeline-text">
+                                        <h6>Categorical Columns</h6>
+                                        <p>Applied Standard Scaler, One Hot Encoding & Mode Imputation</p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Timeline Content-->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <p>MODEL TRAINING</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-icon"><i class="fa fa-tty" aria-hidden="true"></i></div>
+                                    <div class="timeline-text">
+                                        <h6>Applied Grid Search CV</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                                    <div class="timeline-icon"><i class="fa fa-arrows-alt" aria-hidden="true"></i></div>
+                                    <div class="timeline-text">
+                                        <h6>Best Model Metrics</h6>
+                                        <p>Calculated R2 score, RMSE & MSE</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Single Timeline Content-->
+                     <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <p>MODEL EVALUATION</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-icon"><i class="fa fa-area-chart" aria-hidden="true"></i></div>
+                                    <div class="timeline-text">
+                                        <h6>Compared Model</h6>
+                                        <p>Best Trained model is compared with production model</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Single Timeline Content-->
+                     <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <p>MODEL PUSHER</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-icon"><i class="fa fa-cloud-upload" aria-hidden="true"></i></div>
+                                    <div class="timeline-text">
+                                        <h6>Save model into S3 Bucket</h6>
+                                        <p>Used boto3 to upload & download best model</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-icon"><i class="fa fa-check" aria-hidden="true"></i></div>
+                                    <div class="timeline-text">
+                                        <h6>Push best model into production</h6>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    let stars = document.getElementById('stars')
+    let moon = document.getElementById('moon')
+    let mountains_behind = document.getElementById('mountains_behind')
+    let mountains_front = document.getElementById('mountains_front')
+    let btn = document.getElementById('btn')
+    let text = document.getElementById('text')
+    let header = document.querySelector('header')
+
+    window.addEventListener('scroll',function(){
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + 'px';
+        moon.style.top = value * 1.05 + 'px';
+        mountains_behind.style.top = value * 0.5 + 'px';
+        mountains_front.style.top = value * 0 + 'px';
+        text.style.marginRight = value * 4 + 'px';
+        text.style.marginTop = value * 1.5 + 'px';
+        btn.style.marginTop = value * 1.5 + 'px';
+        header.style.top = value * 0.5 + 'px';
+    })
+</script>
+</body>
+</html>
